@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 
 import { AppProvider, useApp } from './context/AppContext';
 import SceneContainer from './three/SceneContainer';
@@ -105,6 +107,8 @@ export default function App() {
   return (
     <AppProvider>
       <AppContent />
+      <SpeedInsights />
+      <Analytics />
     </AppProvider>
   );
 }
