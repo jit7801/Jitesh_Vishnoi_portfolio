@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! This portfolio showcases my journey as a software developer, highlighting my projects, technical skills, education, achievements, and passion for building impactful applications.
 
-🌐 **Live Website:** https://jiteshvishnoiportfolio.vercel.app/
+🌐 **Live Website:** https://jiteshvishnoi.me
 
 ---
 
@@ -94,7 +94,7 @@ npm run build
 
 ## 📬 Connect With Me
 
-- 🌐 Portfolio: https://jiteshvishnoiportfolio.vercel.app/
+- 🌐 Portfolio: https://jiteshvishnoi.me
 - 💼 LinkedIn: https://linkedin.com/in/jiteshvishnoi
 - 💻 GitHub: https://github.com/jit7801
 
