@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #080808;
+  --color-secondary: #121212;
+  --color-accent-blue: #0055ff;
+  --color-accent-purple: #8b5cf6;
+  --color-highlight-cyan: #00f5ff;
+  
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0055ff;
+}
+
+/* Base resets and smooth scrolling */
+html, body {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism utility classes */
+.glass {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-accent {
+  background: rgba(8, 12, 28, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 85, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 85, 255, 0.1);
+}
+
+/* Background vignette overlay for contrast */
+.bg-vignette-overlay {
+  background: radial-gradient(circle at center, rgba(8, 8, 8, 0.45) 0%, rgba(8, 8, 8, 0.8) 100%);
+  background-size: 100% 100%;
+}
+
+/* Hide default cursor if not touch device */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a, button, [role="button"], input, select, textarea, [data-hover-glow] {
+    cursor: none;
+  }
+}
+
+/* Text glowing effects */
+.text-glow-blue {
+  text-shadow: 0 0 10px rgba(0, 85, 255, 0.5), 0 0 20px rgba(0, 85, 255, 0.2);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5), 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 245, 255, 0.5), 0 0 20px rgba(0, 245, 255, 0.2);
+}
+
+/* Background grid effect */
+.bg-grid {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overflow: hidden;
+}
+
+.lenis-target {
+  position: relative;
+  width: 100%;
+}
